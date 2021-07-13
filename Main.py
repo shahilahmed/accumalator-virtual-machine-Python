@@ -76,6 +76,7 @@ def main():
 			print(" -d : generate source assembly code(*.asm) from assembly byte code(*.code)")
 			print(" -o : generate object code with extension(*.object)")
 			print(" -r : take object code(*.object) and run the file")
+			print(" -m : make and run the file")
 			print()
 		if command == "-a":	
 			for path in argv:
@@ -90,6 +91,15 @@ def main():
 			for path in argv:
 				vm = VirtualMachine()
 				vm.load(load_object(path))
+				vm.run()
+		elif command == "-m":	
+			for path in argv:
+				filename = path.split("\\")[-1].split(".")[0]
+				cmd_assemble(path)
+				cmd_object(filename + ".code")
+				print()
+				vm = VirtualMachine()
+				vm.load(load_object(filename + ".object"))
 				vm.run()
 		else:
 			print("usage: python main.py -help")
