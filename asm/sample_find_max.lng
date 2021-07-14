@@ -1,0 +1,1 @@
+$length = 10$arr    = data $length [ 12 98 96 101 56 200 4 89 98 10 ] fun find_max start {	$base = $arr end	$index = 0   end	$max = @base end	while $index < $length until {		if @base > $max then {			$max = @base end		}		$base = $base + 1 end	}	return $max end}fun main start {	print ( find_max ( ) ) end	print_char ( 10 ) end}

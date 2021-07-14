@@ -1,5 +1,5 @@
 NAME    = "Accumalator Virtual Machine with Assembler"
-VERSION = "v0.3.5"
+VERSION = "v0.4.0"
 AUTHOR  = "Md Shahil Ahmed"
 
 HALT  =  0
@@ -133,7 +133,7 @@ instructions_opcodes = {
         INP : {"opcode" : INP, "to_str" : "INP", "nargs" : 0},
         "OUT" : 3,
         OUT : {"opcode" : OUT, "to_str" : "OUT", "nargs" : 0},
-        "SCAN " : 4,
+        "SCAN" : 4,
         SCAN  : {"opcode" : SCAN , "to_str" : "SCAN ", "nargs" : 0},
         "PRINT" : 5,
         PRINT : {"opcode" : PRINT, "to_str" : "PRINT", "nargs" : 0},

@@ -1,0 +1,1 @@
+fun fact $num {	if $num <=1 then {		goto exit	}	return $num * fact($num - 1) end	@exit	return 1 end}fun main {	$num1 = 4 end	$num2 = 2 end	print(fact($num1 + $num2))	print_char(10)	print_char(10)}
